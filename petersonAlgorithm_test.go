@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-var N = 10000000
+var N = 1000000
 
 func TestPetersonAlgorithm(t *testing.T) {
 	c1 := make(chan int, 1)
@@ -19,7 +19,7 @@ func TestPetersonAlgorithm(t *testing.T) {
 		if result != N  {
 			t.Errorf("result equals to %v",result)
 		}
-	case <-time.After(3 * time.Second):
+	case <-time.After(30 * time.Second):
 			t.Errorf("got timeout")
 	}
 }
@@ -36,7 +36,7 @@ func TestPetersonAlgorithmAtomic(t *testing.T) {
 		if result != N  {
 			t.Errorf("result equals to %v",result)
 		}
-	case <-time.After(3 * time.Second):
+	case <-time.After(30 * time.Second):
 		t.Errorf("got timeout")
 	}
 }
