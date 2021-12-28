@@ -1,5 +1,5 @@
 # PetersonAlgorithm
-in this project we can see a common issue when writing multi-hreaded code.
+in this project we can see a common issue when writing multi-threaded code.
 the compiler do instructions reordering which can affect the logic and correctness of the code.
 
 in this example I implement Peterson algorithm for mutual exclusion that allows two or more processes to
